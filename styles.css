@@ -49,6 +49,10 @@ body {
   white-space: nowrap;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   margin-top: 4rem;
   text-align: center;
@@ -122,6 +126,14 @@ main {
   border-color: var(--clr-primary-300);
 }
 
+.error-text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--clr-primary-300);
+  text-align: right;
+}
+
 .button {
   cursor: pointer;
   border: none;
@@ -143,7 +155,7 @@ main {
   filter: brightness(1.1);
 }
 
-.form-card p {
+.terms {
   margin-top: 0.75rem;
   font-size: 0.7rem;
   color: var(--clr-neutral-300);
