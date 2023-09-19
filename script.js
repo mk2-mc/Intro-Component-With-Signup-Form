@@ -60,6 +60,10 @@ form.addEventListener("submit", (e) => {
   const isValid = validate();
   
   if (isValid) {
-    // Hide form & show confirmation    
+    const terms = document.querySelector(".terms");
+    const confirmation = document.querySelector(".confirmation");
+    form.classList.add("hidden");
+    terms.classList.add("hidden");
+    confirmation.classList.remove("hidden");
   }
 });

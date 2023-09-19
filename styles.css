@@ -50,7 +50,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 header {
@@ -126,6 +126,12 @@ main {
   border-color: var(--clr-primary-300);
 }
 
+.error {
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 1.5rem center;
+}
+
 .error-text {
   margin-top: 0.25rem;
   font-size: 0.75rem;
@@ -172,6 +178,13 @@ main {
 .terms-link:focus-visible, 
 .terms-link:hover {
   text-decoration: underline;
+}
+
+.confirmation {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--clr-neutral-700);
+  text-align: center;
 }
 
 @media only screen and (min-width: 62.5em) {
