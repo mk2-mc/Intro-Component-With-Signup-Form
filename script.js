@@ -1,44 +1,46 @@
 const form = document.querySelector(".form");
 const input = document.querySelectorAll(".input");
 const errorText = document.querySelectorAll(".error-text");
+const terms = document.querySelector(".terms");
+const confirmation = document.querySelector(".confirmation");
 
 function validate() {
   let valid = true;
   
   for (let i = 0; i < input.length; i++) {
     const name = input[i].getAttribute("name");
+    let check = true;
     
     // Input empty
     if (input[i].value === "") {
-      input[i].classList.add("error");
-      errorText[i].classList.remove("hidden");
+      check = false;
       errorText[i].innerHTML = `${name} cannot be empty`;
-      valid = false;
     } else {
       
       // Email invalid
-      const emailText = document.querySelector(".email-text");
       const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       
       if ((name === "Email")
       && (!emailFormat.test(input[i].value))) {
-        input[i].classList.add("error");
-        emailText.classList.remove("hidden");
-        emailText.innerHTML = "Looks like this is not an email";
-        valid = false;        
+        check = false;
+        errorText[i].innerHTML = "Looks like this is not an email";    
       }
       
       // Password invalid
-      const passwordText = document.querySelector(".password-text");
       const length = input[i].value.length;
       
       if ((name === "Password")
       && ((length < 8) || (length > 24))) {
-        input[i].classList.add("error");
-        passwordText.classList.remove("hidden");
-        passwordText.innerHTML = "Password must be between 8 and 24 characters";
-        valid = false;        
+        check = false;
+        errorText[i].innerHTML = "Password must be between 8 and 24 characters";      
       }
+    }
+    
+    // Show error message
+    if (!check) {
+      valid = false;
+      input[i].classList.add("error");
+      errorText[i].classList.remove("hidden");      
     }
   }
   
@@ -60,8 +62,6 @@ form.addEventListener("submit", (e) => {
   const isValid = validate();
   
   if (isValid) {
-    const terms = document.querySelector(".terms");
-    const confirmation = document.querySelector(".confirmation");
     form.classList.add("hidden");
     terms.classList.add("hidden");
     confirmation.classList.remove("hidden");
