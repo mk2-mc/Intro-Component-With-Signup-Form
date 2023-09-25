@@ -24,24 +24,24 @@
     <div class="form-card">
       <form class="form">
         <div>
-          <input class="input" id="first-name" name ="First Name" type="text" placeholder="First Name">
+          <input class="input" id="first-name" name ="First Name" type="text" placeholder="First Name" aria-describedby="error-first-name">
           <label class="visually-hidden" for="first-name">First Name</label>
-          <p class="error-text hidden"></p>
+          <p class="error-text hidden" id="error-first-name"></p>
         </div>
         <div>
-          <input class="input" id="last-name" name ="Last Name" type="text" placeholder="Last Name">
+          <input class="input" id="last-name" name ="Last Name" type="text" placeholder="Last Name" aria-describedby="error-last-name">
           <label class="visually-hidden" for="last-name">Last Name</label>
-          <p class="error-text hidden"></p>
+          <p class="error-text hidden" id="error-last-name"></p>
         </div>
         <div>
-          <input class="input" id="email" name ="Email" type="text" placeholder="Email Address">
+          <input class="input" id="email" name ="Email" type="text" placeholder="Email Address" aria-describedby="error-email">
           <label class="visually-hidden" for="email">Email Address</label>
-          <p class="error-text hidden"></p>
+          <p class="error-text hidden" id="error-email"></p>
         </div>
         <div>
-          <input class="input" id="password" name ="Password" type="text" placeholder="Password">
+          <input class="input" id="password" name ="Password" type="text" placeholder="Password" aria-describedby="error-password">
           <label class="visually-hidden" for="password">Password</label>
-          <p class="error-text hidden"></p>
+          <p class="error-text hidden" id="error-password"></p>
         </div>
         <button class="button" type="submit">Claim your free trial</button>
       </form>
