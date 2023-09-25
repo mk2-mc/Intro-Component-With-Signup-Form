@@ -59,9 +59,7 @@ for (let i = 0; i < input.length; i++) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   
-  const isValid = validate();
-  
-  if (isValid) {
+  if (validate()) {
     form.classList.add("hidden");
     terms.classList.add("hidden");
     confirmation.classList.remove("hidden");
