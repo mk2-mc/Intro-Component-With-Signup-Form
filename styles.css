@@ -121,14 +121,11 @@ main {
   border: 0.125rem solid var(--clr-neutral-700);
 }
 
-.error, .error:focus {
-  border-color: var(--clr-primary-300);
-}
-
 .error {
   background-image: url("images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
+  border-color: var(--clr-primary-300) !important;
 }
 
 .error-text {
