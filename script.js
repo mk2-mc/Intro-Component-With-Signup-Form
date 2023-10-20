@@ -12,7 +12,7 @@ function validate() {
     let check = true;
     
     // Input empty
-    if (input[i].value === "") {
+    if (input[i].value.trim() === "") {
       check = false;
       errorText[i].innerHTML = `${name} cannot be empty`;
     } else {
@@ -21,7 +21,7 @@ function validate() {
       const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       
       if ((name === "Email")
-      && (!emailFormat.test(input[i].value))) {
+      && (!emailFormat.test(input[i].value.trim()))) {
         check = false;
         errorText[i].innerHTML = "Looks like this is not an email";    
       }
