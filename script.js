@@ -39,7 +39,7 @@ function validate() {
     // Show error message
     if (!check) {
       valid = false;
-      input[i].classList.add("error");
+      input[i].classList.add("error-input");
       errorText[i].classList.remove("hidden");      
     }
   }
@@ -50,7 +50,7 @@ function validate() {
 // Input changed
 for (let i = 0; i < input.length; i++) {
   input[i].addEventListener("input", () => {
-    input[i].classList.remove("error");
+    input[i].classList.remove("error-input");
     errorText[i].classList.add("hidden");
   });
 }

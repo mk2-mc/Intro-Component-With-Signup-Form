@@ -104,8 +104,8 @@ main {
   display: block;
   width: 100%;
   padding: 1rem;
-  outline: none;
-  border: 0.063rem solid var(--clr-neutral-700-alpha);
+  outline: 0.063rem solid var(--clr-neutral-700-alpha);
+  border: none;
   border-radius: 0.3rem;
   font-family: inherit;
   font-size: 0.9rem;
@@ -118,14 +118,14 @@ main {
 }
 
 .input:focus {
-  border: 0.125rem solid var(--clr-neutral-700);
+  outline: 0.125rem solid var(--clr-neutral-700);
 }
 
-.error {
+.error-input {
   background-image: url("images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
-  border-color: var(--clr-primary-300) !important;
+  outline-color: var(--clr-primary-300) !important;
 }
 
 .error-text {
